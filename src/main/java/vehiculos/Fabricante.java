@@ -38,5 +38,15 @@ public class Fabricante {
 	public void ventasRealizadas() {
 		this.cantidadVentas++;
 	}
+	
+	public static Fabricante fabricaMayorVentas() {
+		Fabricante masVendedor = ventasFabricantes.get(0);
+		for (Fabricante fabricante:ventasFabricantes) {
+			if (fabricante.getVentasRealizadas() > masVendedor.getVentasRealizadas()) {
+				masVendedor = fabricante;
+			}
+		}
+		return masVendedor;
+	}
 
 }
