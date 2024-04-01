@@ -20,7 +20,7 @@ public class Camion extends Vehiculo{
 		return ejes;
 	}
 	
-	public static int getCantidadCreados() {
+	public static int getCantidadVehculosCreados() {
 		return Camion.cantidadVehiculosCreados;
 	}
 	public static void sumaCantidadVehiculos() {

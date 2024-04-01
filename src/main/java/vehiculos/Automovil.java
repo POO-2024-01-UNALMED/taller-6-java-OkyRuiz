@@ -20,7 +20,7 @@ public class Automovil extends Vehiculo {
 		return this.puestos;
 	}
 	
-	public static int getCantidadCreados() {
+	public static int getCantidadVehiculosCreados() {
 		return Automovil.cantidadVehiculosCreados;
 	}
 	

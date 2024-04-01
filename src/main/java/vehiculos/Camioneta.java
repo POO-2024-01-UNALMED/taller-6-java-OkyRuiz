@@ -21,7 +21,7 @@ public class Camioneta extends Vehiculo {
 		return volco;
 	}
 	
-	public static int getCantidadCreados( ) {
+	public static int getCantidadVehiculosCreados( ) {
 		return Camioneta.cantidadVehiculosCreados;
 	}
 	
