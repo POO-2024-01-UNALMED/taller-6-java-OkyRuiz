@@ -2,27 +2,27 @@ package vehiculos;
 
 public class Camion extends Vehiculo{
 	
-	private static int cantidadVehiculosCreados=0;
 	private int ejes;
+	private static int cantidadVehiculosCreados = 0;
 	
-	public Camion(String placa, int puertas, int velocidad, String nombre, int precio, int peso, String traccion, Fabricante fabri, int ejes) {
-		super(placa,2,80,nombre,precio,peso,"4X2",fabri);
-		this.ejes= ejes;
-		Camion.cantidadVehiculosCreados+=1;
-	}
-	
-	
-	public void setEjes(int ejes) {
-		this.ejes= ejes;
+	public Camion(String placa, String nombre, int precio, int peso, Fabricante fabricante, int ejes) {
+		super(placa, 2, 80, nombre, precio, peso, "4X2", fabricante);
+		this.ejes = ejes;
+		Camion.sumaCantidadVehiculos();
 	}
 	
 	public int getEjes() {
 		return ejes;
 	}
 	
-	public static int getCantidadVehculosCreados() {
-		return Camion.cantidadVehiculosCreados;
+	public void setEjes(int ejes) {
+		this.ejes = ejes;
 	}
+	
+	public static int getCantidadVehiculosCreados() {
+		return cantidadVehiculosCreados;
+	}
+	
 	public static void sumaCantidadVehiculos() {
 		cantidadVehiculosCreados++;
 	}

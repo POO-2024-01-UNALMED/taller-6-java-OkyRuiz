@@ -9,10 +9,10 @@ public class Fabricante {
 	private int cantidadVentas = 0;
 	private static ArrayList<Fabricante> ventasFabricantes = new ArrayList<Fabricante>();
 	
-	public Fabricante (String nombre, Pais pais) {
-		this.nombre= nombre;
+	public Fabricante(String nombre, Pais pais) {
+		this.nombre = nombre;
 		this.pais = pais;
-		Fabricante.ventasFabricantes.add(this);
+		ventasFabricantes.add(this);
 	}
 	
 	public String getNombre() {

@@ -1,7 +1,7 @@
 package vehiculos;
 
 public class Vehiculo {
-    private static int cantidadVehiculos=0;
+	
 	private String placa;
 	private int puertas;
 	private int velocidadMaxima;
@@ -10,23 +10,19 @@ public class Vehiculo {
 	private int peso;
 	private String traccion;
 	private Fabricante fabricante;
+	private static int cantidadVehiculos = 0;
 	
-	
-	public Vehiculo(String placa, int puertas, int velocidad, String nombre, int precio, int peso, String traccion, Fabricante fabri) {
-		
-		this.placa=placa;
-		this.puertas= puertas;
-		this.velocidadMaxima= velocidad;
-		this.nombre= nombre;
-		this.precio= precio;
-		this.peso= peso;
-		this.traccion= traccion;
-		this.fabricante= fabri;
-		Vehiculo.cantidadVehiculos++;
+	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+		this.placa = placa;
+		this.puertas = puertas;
+		this.velocidadMaxima = velocidadMaxima;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.peso = peso;
+		this.traccion = traccion;
+		this.fabricante= fabricante;
+		Vehiculo.cantidadVehiculos ++;
 	}
-	
-	
-	//MÉTODOS SETTER Y GETTER
 	
 	public String getPlaca() {
 		return placa;
@@ -97,12 +93,13 @@ public class Vehiculo {
 	}
 	
 	public static void setCantidadVehiculos(int cantidadVehiculos) {
-		Vehiculo.cantidadVehiculos = cantidadVehiculos;
+		cantidadVehiculos = cantidadVehiculos;
 	}
 	
 	public static String vehiculosPorTipo() {
 		return "Automoviles: " + Automovil.getCantidadVehiculosCreados() + "\nCamionetas: " + Camioneta.getCantidadVehiculosCreados() + "\nCamiones: " + Camion.getCantidadVehiculosCreados();
 	}
+
 
 
 }

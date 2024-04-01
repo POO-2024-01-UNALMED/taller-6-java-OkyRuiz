@@ -4,17 +4,16 @@ import java.util.ArrayList;
 
 public class Pais {
 
-    private String nombre;
-    private int cantidadVentas = 0;
+	private String nombre;
+	private int cantidadVentas = 0;
 	private static ArrayList<Pais> ventasPaises = new ArrayList<Pais>();
-
-    public Pais (String nombre){
-        this.nombre= nombre;
-        Pais.ventasPaises.add(this);
-    }
-    
-    //MÉTODOS GETTER Y SETTER
-    public String getNombre() {
+	
+	public Pais(String nombre) {
+		this.nombre = nombre;
+		ventasPaises.add(this);
+	}
+	
+	public String getNombre() {
 		return nombre;
 	}
 	
@@ -39,4 +38,5 @@ public class Pais {
 		}
 		return masVendedor;
 	}
+ 
 }
