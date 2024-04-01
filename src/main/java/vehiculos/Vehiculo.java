@@ -22,7 +22,7 @@ public class Vehiculo {
 		this.peso= peso;
 		this.traccion= traccion;
 		this.fabricante= fabri;
-		Vehiculo.cantidadVehiculos+=1;
+		Vehiculo.cantidadVehiculos++;
 	}
 	
 	
@@ -101,7 +101,7 @@ public class Vehiculo {
 	}
 	
 	public static String vehiculosPorTipo() {
-		return "Automoviles: " + Automovil.getCantidadCreados() + "\nCamionetas: " + Camioneta.getCantidadCreados() + "\nCamiones: " + Camion.getCantidadCreados();
+		return "Automoviles: " + Automovil.getCantidadVehiculosCreados() + "\nCamionetas: " + Camioneta.getCantidadVehiculosCreados() + "\nCamiones: " + Camion.getCantidadVehiculosCreados();
 	}
 
 

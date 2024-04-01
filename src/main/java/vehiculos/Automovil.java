@@ -2,14 +2,13 @@ package vehiculos;
 
 public class Automovil extends Vehiculo {
 	
-	private static int cantidadCreados=0;
-	
+	private static int cantidadVehiculosCreados=0;
 	private int puestos;
 	
 	public Automovil(String placa,String nombre, int precio, int peso, Fabricante fabri, int puestos) {
 		super(placa,4,100,nombre,precio,peso,"FWD", fabri);
 		this.puestos = puestos;
-		Automovil.cantidadCreados+=1;
+		Automovil.cantidadVehiculosCreados+=1;
 		
 	}
 	
@@ -22,6 +21,10 @@ public class Automovil extends Vehiculo {
 	}
 	
 	public static int getCantidadCreados() {
-		return Automovil.cantidadCreados;
+		return Automovil.cantidadVehiculosCreados;
+	}
+	
+	public static void sumaCantidadVehiculos() {
+		cantidadVehiculosCreados++;
 	}
 }
